@@ -1,0 +1,327 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+body, h1, h2, h3, h4, h5, h6, p, a, ul {
+    // color: $body-text-color;
+} 
+p, a, ul, ol {
+
+}
+ul li, ol li {
+    margin: 0 0 0 20px;
+    font-size: 18px;
+}
+ul {
+    li {
+        list-style-type: none;
+        font-family: $sans;
+        font-size: 19px !important;
+        line-height: 28px;
+        color:$slategray;
+        position: relative;
+    }
+}
+
+// in-content list item styles //
+.columns {
+    ul {
+        margin-bottom: 28px !important;
+        margin-left: 0;
+        li {
+            list-style-type: disc;
+            font-family: $sans;
+            font-size: 19px !important;
+            line-height: 28px;
+            color:$slategray;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                left: -20px;
+                font-family: icomoon;
+                font-size: 13px;
+                top: 0px;
+                color: $blue;
+            }
+            &:last-child {
+                margin-bottom:0;
+            }
+        }
+        &.double {
+            -moz-column-count: 2;
+            column-count:2;
+            -moz-column-gap: 10%;
+            column-gap:10%;
+        }
+        &.triple {
+            -moz-column-count: 3;
+            column-count:3;
+            -moz-column-gap: 7%;
+            column-gap:7%;
+        }
+        @media screen and (max-width:$screen-xs) {
+            &.double,
+            &.triple {
+                -moz-column-count: 1;
+                column-count:1;
+            }
+        }
+    }
+}
+
+dl, blockquote, img {
+
+}
+h1 {
+    font-size: 16px;
+    color: $blue;
+    letter-spacing: .1em;
+    font-family: $sans;
+    margin-bottom:10px;
+    @media screen and (max-width:$screen-xs) {
+        font-size: 15px;
+        line-height: 120%;
+        margin-bottom: 18px !important;
+    }
+}
+h2 {
+    font-family:$serif;
+    color:$slategray;
+    font-size:42px;
+    line-height:48px;
+    &.interior {
+        font-size: 30px;
+        margin-bottom: 0px !important;
+        line-height: 130%;
+    }
+    @media screen and (max-width:$screen-lg) {
+        font-size: 34px;
+        line-height: 120%;
+    }
+}
+h3 {
+    font-family:$serif;
+    color:$slategray;
+    font-size:30px;
+    line-height:36px;
+    @media screen and (max-width:$screen-xs) {
+        font-size: 26px;
+        line-height: 120%;
+    }
+}
+h4 {
+    font-family: $serif;
+    font-size: 24px;
+    color:$slategray;
+    margin: 0 0 40px !important;
+    position: relative;
+    &:after {
+        position: absolute;
+        left: 0;
+        content: "";
+        height: 4px;
+        width: 60px;
+        background:$blue;
+        bottom: -20px;
+    }
+}
+.h2-sub {
+    font-size: 18px;
+    color: $blue;
+    letter-spacing: .05em;
+    font-family: $sans;
+    margin: 10px 0 80px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height:140%;
+    &.hp-prep {
+        margin: 10px 0 40px;
+    }
+}
+.h2-pre {
+    font-size: 18px;
+    color: $blue;
+    letter-spacing: .05em;
+    font-family: $sans;
+    margin: 0 !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height:120%;
+}
+.h3-intro {
+    font-size: 22px;
+}
+.h3-sub {
+    color: $blue;
+    font-size: 22px;
+    font-weight: 300;
+    margin-top:5px !important;
+}
+p {
+    font-family: $sans;
+    font-size:19px;
+    color:$slategray;
+    line-height: 28px;
+    margin: 0 0 28px !important;
+    font-weight:300;
+    &.strong.spread {
+        font-weight:600;
+        letter-spacing:.1em;
+        @media screen and (max-width:1024px) {
+            letter-spacing: 0;
+            font-size:18px;
+		}
+    }
+    strong {
+        font-weight:600;
+    }
+    &.larger {
+        font-size:22px;
+        line-height:32px;
+    }
+    a {
+        color:$blue;
+        font-weight: 600;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+a {
+    text-decoration:none;
+    transition:$trans;
+    font-family: inherit;
+    color: inherit;
+    &:hover {
+        color:$blue;
+        text-decoration:none;
+    }
+    &.driving-directions {
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: .1em;
+        color: $blue;
+        font-weight:600;
+        @media screen and (max-width:$screen-xs) {
+            letter-spacing: 0;
+            line-height: 3.5em; 
+            padding-bottom: 25px;
+        }
+        .icon-arrow-right2 {
+            padding-top: 2px !important;
+            vertical-align: text-top;
+            font-size: 18px;
+        }
+    }
+}
+
+.btn {
+    display:inline-block;
+    padding:15px 30px 13px 30px;
+    background-color:$blue;
+    text-decoration:none;
+    color:$white;
+    border:none;
+    transition:$trans;
+    font-family: $sans;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    line-height:100%;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.2s;
+    &:hover {
+        background-color:$blue;
+        &:after {
+            right:18px;
+            transition: $trans;
+            color:$blue;
+        }
+        &:before {
+            transform: scaleX(1);
+        }
+    }
+    &:after {
+        content: "";
+        font-family: icomoon;
+        position: absolute;
+        top: 14px;
+        right: 21px;
+        font-size: 15px;
+        transition: $trans;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $slategray;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition-property: transform;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+    }
+}
+
+.consultation {
+    color: $blue;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    line-height: inherit;
+    &:after {
+        content:"\ea3c";
+        font-family:icomoon;
+        position:absolute;
+        right:-30px;
+        top:-4px;
+        transition:$trans;
+        @media screen and (max-width:$screen-xs) {
+            display:none;
+        }
+    }
+    &:hover {
+        &:after {
+            right:-34px;
+            transition: $trans;
+        }
+    }
+}
+
+// classes for specific colors //
+.blue {
+    color:$blue;
+}
+
+// breadcrumb styles //
+
+p#breadcrumbs {
+    padding: 0;
+    font-weight: 600;
+    font-family: $serif;
+    a {
+        color:$blue !important;
+        &:hover {
+            color:$slategray;
+        }
+    }
+    .icon-drw-chevron-right {
+        font-size: 13px;
+        font-weight: bold;
+        margin: 0 5px;
+    }
+}

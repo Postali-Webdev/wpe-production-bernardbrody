@@ -1,0 +1,124 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+footer {
+    .footer-contact {
+        .container {
+            max-width:100%;
+            padding:0;
+        }
+        padding:0;
+        .column-half {
+            padding: 4% 5% 3%;
+            box-sizing: border-box;
+            
+            p .blue {
+                font-weight: 600;
+                font-size: 16px;
+            }
+            
+            p > a {
+                font-weight:400;
+                color:$slategray;
+                text-decoration: none;
+                
+                &:hover {
+                    color:$blue;
+                    text-decoration:underline;
+                }
+            }
+
+            &.map {
+                padding: 0 !important;
+
+                iframe {
+                    height: 100%;
+                    width: 100%;
+                    -webkit-filter: grayscale(1);
+                            filter: grayscale(1);
+                }
+            }
+        }
+    }
+    .footer-utility {
+        padding: 10px 0;
+        background:$blue;
+        .container {
+            display:flex;
+            flex-direction: row;
+            color: $white;
+            font-family: $sans;
+            @media screen and (max-width:$screen-sm) {
+                flex-wrap: wrap;
+            }
+            .footer-copyright {
+                display: flex;
+                align-items: center;
+                width: 33%;
+                justify-content: flex-end;
+                @media screen and (max-width:1024px) {
+                    font-size:16px;
+                }
+                @media screen and (max-width:$screen-sm) {
+                    display:none;
+                }
+            }
+            .footer-social {
+                display:flex;
+                justify-content: center;
+                width: 33%;
+                flex-wrap: nowrap;
+                span {
+                    font-size: 36px;
+                    color:$white;
+                    margin:0 5px;
+                }
+                @media screen and (max-width:$screen-sm) {
+                    width:100%;
+                    margin:10px 0;
+                }
+            }
+            .footer-menu {
+                display: flex;
+                align-items: center;
+                width: 33%;
+                justify-content: flex-start;
+                #menu-footer-menu {
+                    margin: 0 !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 !important;
+                    a {
+                        color: $white;
+                        @media screen and (max-width:1024px) {
+                            font-size:16px;
+                        }
+                    }
+                    li {
+                        margin:0 10px !important;
+                    }
+                }
+                @media screen and (max-width:$screen-sm) {
+                    width:100%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    section:first-of-type {
+        margin-top: 0;
+    }
+    .wpcf7-form {
+        textarea {
+            @media screen and (max-width: $screen-sm) {
+                text-indent: -3px;
+                margin-left: -3px;
+            }
+        }
+    }
+}

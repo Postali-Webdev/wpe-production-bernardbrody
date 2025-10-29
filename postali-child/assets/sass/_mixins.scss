@@ -1,0 +1,196 @@
+/**
+ * Theme footer
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+@mixin dropdown {
+    /* Dropdown Button */
+.dropbtn {
+    background: transparent;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid $slategray;
+    margin-bottom: 0px;
+    cursor: pointer;
+    @media screen and (max-width: $screen-xs ) {
+        width: 100%;
+    }
+    @media screen and (max-width: $screen-xxs ) {
+        padding: 10px;
+        font-size: 12px;
+    }
+    &:hover, &:focus {
+        background-color: #2980B9;
+    }
+    i {
+        margin-left: 20px;
+        &:before {
+            transform: rotate(180deg);
+            display: inline-block;
+            color: $blue;
+            font-size: 14px;
+            @media screen and (max-width: $screen-xxs ) {
+                font-size: 10px;
+            }
+        }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    @media screen and (max-width: $screen-xs ) {
+        width: 100%;
+    }
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0;
+        &:hover {
+            color: $blue;
+        }
+    }
+  }
+    .show {
+      display:block;
+    }
+}
+
+@mixin result-boxes {
+    .result-box {
+        background:$white;
+        padding:2%;
+        width:27.333%;
+        text-align: left;
+        transition:$trans;
+        margin-bottom: 40px;
+        @media screen and (max-width:$screen-sm) {
+            padding:5%;
+            width:38%;
+            margin-bottom:30px !important;
+        }
+        @media screen and (max-width:$screen-xs) {
+            padding:5%;
+            width:100%;
+            margin-bottom:20px !important;
+        }
+        &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+            transition:$trans;
+            margin-top: -3px;
+            margin-bottom:43px;
+            @media screen and (max-width:$screen-sm) {
+                margin-top:0;
+                margin-bottom:30px;
+            }
+            @media screen and (max-width:$screen-xs) {
+                margin-top:0;
+                margin-bottom:20px;
+            }
+            .result-category,
+            .result-title {
+                color:$blk;
+            }
+            .result-title {
+                text-decoration: none !important;
+            }
+        }
+        .result-category {
+            font-family: $sans;
+            color:$blue;
+            display: block;
+            font-weight: 600;
+            letter-spacing: .05em;
+            margin-bottom: 20px;
+            font-size: 17px;
+            .comma {
+                &:last-child {
+                    display:none;
+                }
+            }
+        }
+        .result-title {
+            font-family: $serif;
+            font-size: 24px;
+            margin-bottom: 30px;
+            display: block;
+            line-height: 30px;
+            color: $slategray;
+        }
+        .result-excerpt {
+            margin-bottom:0 !important;
+            font-size:19px;
+            font-family:$sans;
+            line-height: 28px;
+            font-weight:300;
+            color:$blk !important;
+            &:hover {
+                color: $blk !important;
+            }
+            p {
+                color:$blk !important;
+                &:hover {
+                    color: $blk !important;
+                }
+            }
+        }
+        &:nth-child(3n+2) {
+            margin-left: 3%;
+            margin-right: 3%;
+            @media screen and (max-width:$screen-md) {
+                margin-left:0;
+                margin-right:0;
+            }
+        }
+        &:nth-child(even) {
+            @media screen and (max-width:$screen-md) {
+                margin-left:4%;
+            }
+            @media screen and (max-width:$screen-sm) {
+                margin:0;
+            }
+        }
+    }
+}
+
+@mixin more-pages {
+    .more-pages {
+        padding:15px 0;
+        background:$slategray;
+        p {
+            color:$white;
+            margin-bottom:0 !important;
+            a {
+                position: relative;
+            }
+            .divider {
+                padding: 0 25px;
+                &:last-child {
+                    display:none;
+                }
+            }
+        }
+        @media screen and (max-width:$screen-xs) {
+            a, strong {
+                display:block;
+            }
+            .divider {
+                display:none;
+            }
+        }
+    } 
+}
